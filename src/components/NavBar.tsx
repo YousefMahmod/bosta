@@ -16,7 +16,7 @@ const NavBar = () => {
     <HStack
       fontWeight="bold"
       justifyContent="space-between"
-      paddingX={24}
+      // paddingX={24}
       paddingY={4}
     >
       {i18n.dir() == "ltr" && <Img src={LogoEn} />}
