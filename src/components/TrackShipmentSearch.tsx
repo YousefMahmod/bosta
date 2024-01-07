@@ -44,6 +44,9 @@ const TrackShipmentSearch = () => {
                 borderRadius={4}
                 color="white"
                 children={<BsSearch />}
+                onClick={() =>
+                  navigate(`/tracking-shipments/${ref?.current?.value}`)
+                }
               />
               <Input
                 ref={ref}
