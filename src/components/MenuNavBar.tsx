@@ -1,14 +1,16 @@
 import {
+  IconButton,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
-  IconButton,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CONTANCT_SALES, HOME, LOGIN, PRICING } from "../constants";
 
 const MenuNavBar = () => {
+  const [t, i18n] = useTranslation();
   return (
     <Menu>
       <MenuButton
@@ -18,11 +20,20 @@ const MenuNavBar = () => {
         variant="outline"
       />
       <MenuList>
-        <MenuItem>{HOME}</MenuItem>
-        <MenuItem>{PRICING}</MenuItem>
-        <MenuItem>{CONTANCT_SALES}</MenuItem>
-        <MenuItem>{LOGIN}</MenuItem>
-        <MenuItem color="#E30613">AR</MenuItem>
+        <MenuItem>{t(HOME)}</MenuItem>
+        <MenuItem>{t(PRICING)}</MenuItem>
+        <MenuItem>{t(CONTANCT_SALES)}</MenuItem>
+        <MenuItem>{t(LOGIN)}</MenuItem>
+        {i18n.dir() == "ltr" && (
+          <MenuItem color="#E30613" onClick={() => i18n.changeLanguage("ar")}>
+            AR
+          </MenuItem>
+        )}
+        {i18n.dir() == "rtl" && (
+          <MenuItem color="#E30613" onClick={() => i18n.changeLanguage("en")}>
+            ENG
+          </MenuItem>
+        )}
       </MenuList>
     </Menu>
   );
