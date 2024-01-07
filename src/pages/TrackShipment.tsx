@@ -36,14 +36,15 @@ const TrackShipment = () => {
         <Text>{t(TRACK_NOT_EXIST)}</Text>
       </HStack>
     );
+  if (error) return null;
   if (!data) return null;
   return (
     <Box>
       <TrackShipmentInfo shipment={data} />
       <TrackShipmentProgress shipment={data} />
       <SimpleGrid
-        templateColumns={{ md: "2fr 1fr" }}
-        columns={{ base: 1, md: 2 }}
+        templateColumns={{ base: "1fr", lg: "2fr 1fr" }}
+        columns={{ base: 1, lg: 2 }}
         gap={4}
         my={4}
       >

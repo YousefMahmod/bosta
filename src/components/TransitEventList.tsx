@@ -25,14 +25,15 @@ const TransitEventList = ({ shipment }: Props) => {
       maxHeight="300px"
       overflowY="auto"
       overflowX="auto"
+      fontSize={{ base: "xx-small", sm: "small" }}
     >
-      <Table variant="simple" size="sm">
+      <Table variant="simple">
         <Thead backgroundColor="rgba(250,250,250,255)">
           <Tr>
-            <Th>{t(HUB)}</Th>
-            <Th>{t(DATE)}</Th>
-            <Th>{t(TIME)}</Th>
-            <Th>{t(DETAILS)}</Th>
+            <Th paddingX={1}>{t(HUB)}</Th>
+            <Th paddingX={1}>{t(DATE)}</Th>
+            <Th paddingX={1}>{t(TIME)}</Th>
+            <Th paddingX={1}>{t(DETAILS)}</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -40,10 +41,10 @@ const TransitEventList = ({ shipment }: Props) => {
             const [date, time] = getDate(transit.timestamp);
             return (
               <Tr key={index}>
-                <Td>{transit.hub || ""} </Td>
-                <Td>{date}</Td>
-                <Td>{time}</Td>
-                <Td>{t(transit.state)}</Td>
+                <Td paddingX={1}>{transit.hub || ""} </Td>
+                <Td paddingX={1}>{date}</Td>
+                <Td paddingX={1}>{time}</Td>
+                <Td paddingX={1}>{t(transit.state)}</Td>
               </Tr>
             );
           })}
