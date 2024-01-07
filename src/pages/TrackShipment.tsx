@@ -25,7 +25,7 @@ import {
 } from "../constants";
 
 const TrackShipment = () => {
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   const { trackId } = useParams();
   const { error, isLoading, data } = useTrackShipment(trackId!);
 

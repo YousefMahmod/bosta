@@ -1,12 +1,11 @@
 import {
-  TableContainer,
   Table,
-  Thead,
-  Tr,
-  Th,
+  TableContainer,
   Tbody,
   Td,
-  Tfoot,
+  Th,
+  Thead,
+  Tr,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { DATE, DETAILS, HUB, TIME } from "../constants";
@@ -18,7 +17,7 @@ interface Props {
 }
 
 const TransitEventList = ({ shipment }: Props) => {
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   const { TransitEvents } = { ...shipment };
   return (
     <TableContainer

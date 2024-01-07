@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 const Layout = () => {
-  const [t, i18n] = useTranslation();
+  const [, i18n] = useTranslation();
   return (
     <>
       <Helmet htmlAttributes={{ lang: i18n.language, dir: i18n.dir() }} />

@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { TRACK_SHIPMENT } from "../constants";
 const TrackShipmentSearch = () => {
   const ref = useRef<HTMLInputElement>(null);
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   const navigate = useNavigate();
   return (
     <Popover>

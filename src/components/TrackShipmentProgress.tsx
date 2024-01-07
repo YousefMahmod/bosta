@@ -48,8 +48,7 @@ interface Props {
   shipment: TrackShipment;
 }
 const TrackShipmentProgress = ({ shipment }: Props) => {
-  // transitEvents loop
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   const { TransitEvents, CurrentStatus } = { ...shipment };
   const currentState = CurrentStatus.state;
 

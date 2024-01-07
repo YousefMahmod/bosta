@@ -14,7 +14,7 @@ interface Props {
 }
 
 const TrackShipmentInfo = ({ shipment }: Props) => {
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   const { TrackingNumber, CurrentStatus, provider, PromisedDate } = {
     ...shipment,
   };
