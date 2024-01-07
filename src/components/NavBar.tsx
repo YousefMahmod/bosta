@@ -10,17 +10,19 @@ import {
   TRACK_SHIPMENT,
 } from "../constants";
 import MenuNavBar from "./MenuNavBar";
+import TrackShipmentSearch from "./TrackShipmentSearch";
+import { useNavigate } from "react-router-dom";
 const NavBar = () => {
   const [t, i18n] = useTranslation();
+  const navigate = useNavigate();
   return (
-    <HStack
-      fontWeight="bold"
-      justifyContent="space-between"
-      // paddingX={24}
-      paddingY={4}
-    >
-      {i18n.dir() == "ltr" && <Img src={LogoEn} />}
-      {i18n.dir() == "rtl" && <Img src={LogoAr} />}
+    <HStack fontWeight="bold" justifyContent="space-between" paddingY={4}>
+      {i18n.dir() == "ltr" && (
+        <Img src={LogoEn} cursor="pointer" onClick={() => navigate("/")} />
+      )}
+      {i18n.dir() == "rtl" && (
+        <Img src={LogoAr} cursor="pointer" onClick={() => navigate("/")} />
+      )}
       <Show above="lg">
         <HStack gap={10}>
           <Text>{t(HOME)}</Text>
@@ -28,7 +30,7 @@ const NavBar = () => {
           <Text>{t(CONTANCT_SALES)}</Text>
         </HStack>
         <HStack>
-          <Text>{t(TRACK_SHIPMENT)}</Text>
+          <TrackShipmentSearch />
           <Button fontWeight="bold" variant="ghost">
             {t(LOGIN)}
           </Button>
@@ -55,6 +57,7 @@ const NavBar = () => {
         </HStack>
       </Show>
       <Show below="lg">
+        <TrackShipmentSearch />
         <MenuNavBar />
       </Show>
     </HStack>

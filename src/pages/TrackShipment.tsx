@@ -10,25 +10,33 @@ import {
   Text,
 } from "@chakra-ui/react";
 import useTrackShipment from "../hooks/useTrackShipment";
-import TrackShipmentInfo from "./TrackShipmentInfo";
-import TrackShipmentProgress from "./TrackShipmentProgress";
-import TransitEventList from "./TransitEventList";
+
 import { useTranslation } from "react-i18next";
 import {
   ADDRESS,
   COMPLAIN,
   IS_THERE_PROBLEM,
   SHIPMENT_DETAILS,
+  TRACK_NOT_EXIST,
 } from "../constants";
 import Question from "../assets/question.jpg";
+import TrackShipmentInfo from "../components/TrackShipmentInfo";
+import TrackShipmentProgress from "../components/TrackShipmentProgress";
+import TransitEventList from "../components/TransitEventList";
+import { useParams } from "react-router-dom";
 
 const TrackShipment = () => {
   const [t, i18n] = useTranslation();
-  const trackId = "67151313";
-  const { error, isLoading, data } = useTrackShipment(trackId);
+  const { trackId } = useParams();
+  const { error, isLoading, data } = useTrackShipment(trackId!);
 
   if (isLoading) return <Spinner />;
-  if (error) return null;
+  if (error && trackId)
+    return (
+      <HStack justifyContent="center" alignItems="center">
+        <Text>{t(TRACK_NOT_EXIST)}</Text>
+      </HStack>
+    );
   if (!data) return null;
   return (
     <Box>

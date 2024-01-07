@@ -20,15 +20,20 @@ export const SHIPMENT_DETAILS = "Shipment Details";
 export const ADDRESS = "Address";
 export const IS_THERE_PROBLEM = "Do you face any problem with your shipment?!";
 export const COMPLAIN = "Complain";
+export const PAGE_NOT_FOUND = "This page doesn't exist";
+export const UNEXPECTED_ERROR = "Sorry unexpected error";
+export const SORRY = "Opps..";
+export const TRACK_NOT_EXIST =
+  "No record of this tracking number can be found at this time, please check the number and try again later. For further assistance, please contact Customer Service.";
 
 export enum DayOfWeek {
   Fri = "Fri",
   Sat = "Sat",
   Sun = "Sun",
   Mon = "Mon",
-  Tues = "Tues",
+  Tue = "Tue",
   Wed = "Wed",
-  Thurs = "Thurs",
+  Thur = "Thurs",
 }
 export enum Month {
   Jan = "Jan",
