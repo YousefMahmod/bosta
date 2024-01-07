@@ -6,7 +6,7 @@ interface TransitEvent {
   timestamp: string;
 }
 
-interface TrackShipment {
+export interface TrackShipment {
   CreateDate: string;
   CurrentStatus: { state: string; timestamp: string };
   PromisedDate: string;
