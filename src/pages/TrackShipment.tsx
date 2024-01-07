@@ -3,7 +3,6 @@ import {
   Button,
   GridItem,
   HStack,
-  Heading,
   Img,
   SimpleGrid,
   Spinner,
@@ -12,6 +11,11 @@ import {
 import useTrackShipment from "../hooks/useTrackShipment";
 
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
+import Question from "../assets/question.jpg";
+import TrackShipmentInfo from "../components/TrackShipmentInfo";
+import TrackShipmentProgress from "../components/TrackShipmentProgress";
+import TransitEventList from "../components/TransitEventList";
 import {
   ADDRESS,
   COMPLAIN,
@@ -19,11 +23,6 @@ import {
   SHIPMENT_DETAILS,
   TRACK_NOT_EXIST,
 } from "../constants";
-import Question from "../assets/question.jpg";
-import TrackShipmentInfo from "../components/TrackShipmentInfo";
-import TrackShipmentProgress from "../components/TrackShipmentProgress";
-import TransitEventList from "../components/TransitEventList";
-import { useParams } from "react-router-dom";
 
 const TrackShipment = () => {
   const [t, i18n] = useTranslation();

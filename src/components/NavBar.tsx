@@ -1,17 +1,11 @@
 import { Button, HStack, Img, Show, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import LogoAr from "../assets/logoAr.svg";
 import LogoEn from "../assets/logoEn.svg";
-import {
-  CONTANCT_SALES,
-  HOME,
-  LOGIN,
-  PRICING,
-  TRACK_SHIPMENT,
-} from "../constants";
+import { CONTANCT_SALES, HOME, LOGIN, PRICING } from "../constants";
 import MenuNavBar from "./MenuNavBar";
 import TrackShipmentSearch from "./TrackShipmentSearch";
-import { useNavigate } from "react-router-dom";
 const NavBar = () => {
   const [t, i18n] = useTranslation();
   const navigate = useNavigate();
