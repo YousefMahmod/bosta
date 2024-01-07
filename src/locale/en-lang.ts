@@ -1,6 +1,8 @@
 import {
+  COMPLAIN,
   DELETED,
   DELIVERED,
+  IS_THERE_PROBLEM,
   OUT_FOR_DELIVERY,
   PACKAGE_RECEIVED,
   TICKET_CREATED,
@@ -16,4 +18,6 @@ export const enLang = {
   WAITING_FOR_CUSTOMER_ACTION: "Waiting For Customer Action",
   NOT_YET_SHIPPED: "Not Yet Shipped",
   IN_TRANSIT: "In Transit",
+  [IS_THERE_PROBLEM]: "Do you face any problem with your shipment?!",
+  [COMPLAIN]: "Complain",
 };

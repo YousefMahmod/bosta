@@ -59,7 +59,6 @@ const TrackShipmentProgress = ({ shipment }: Props) => {
   });
   const [colorScheme, setColorScheme] = useState("green");
   useEffect(() => {
-    // console.log(currentState);
     let currentIndex = steps.findIndex((step) => step.status == currentState);
     if (currentIndex != -1) {
       setActiveStep(++currentIndex);

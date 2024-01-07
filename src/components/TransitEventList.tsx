@@ -21,8 +21,13 @@ const TransitEventList = ({ shipment }: Props) => {
   const [t, i18n] = useTranslation();
   const { TransitEvents } = { ...shipment };
   return (
-    <TableContainer maxHeight="300px" overflowY="auto" overflowX="auto">
-      <Table variant="simple" size="md">
+    <TableContainer
+      white-space="wrap"
+      maxHeight="300px"
+      overflowY="auto"
+      overflowX="auto"
+    >
+      <Table variant="simple" size="sm">
         <Thead backgroundColor="rgba(250,250,250,255)">
           <Tr>
             <Th>{t(HUB)}</Th>

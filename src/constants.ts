@@ -16,6 +16,11 @@ export const HUB = "hub";
 export const DATE = "date";
 export const TIME = "time";
 export const DETAILS = "Details";
+export const SHIPMENT_DETAILS = "Shipment Details";
+export const ADDRESS = "Address";
+export const IS_THERE_PROBLEM = "Do you face any problem with your shipment?!";
+export const COMPLAIN = "Complain";
+
 export enum DayOfWeek {
   Fri = "Fri",
   Sat = "Sat",
