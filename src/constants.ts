@@ -12,6 +12,10 @@ export const TICKET_CREATED = "Ticket Created";
 export const PACKAGE_RECEIVED = "Package Recieved";
 export const OUT_FOR_DELIVERY = "Out For Delivery";
 export const DELETED = "Deleted";
+export const HUB = "hub";
+export const DATE = "date";
+export const TIME = "time";
+export const DETAILS = "Details";
 export enum DayOfWeek {
   Fri = "Fri",
   Sat = "Sat",

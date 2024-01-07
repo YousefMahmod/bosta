@@ -1,7 +1,10 @@
 import {
   CONTANCT_SALES,
+  DATE,
+  DETAILS,
   DayOfWeek,
   HOME,
+  HUB,
   LAST_UPDATE,
   LOGIN,
   Month,
@@ -9,6 +12,7 @@ import {
   PROMISED_DATE,
   PROVIDER,
   SHIPMENT_NUMBER,
+  TIME,
   TRACK_SHIPMENT,
 } from "../constants";
 
@@ -29,6 +33,13 @@ export const arLang = {
   DELIVERED_TO_SENDER: "تم تسليم",
   CANCELLED: "تم الغاء الشحنة",
   DELETED: "تم الغاء الشحنة",
+  WAITING_FOR_CUSTOMER_ACTION: "لم يتم تسليم الشحنة",
+  NOT_YET_SHIPPED: "لم يتم تجهيز الشحنة بعد",
+  IN_TRANSIT: "الشحنة قيد التنفيذ",
+  [HUB]: "الفرع",
+  [DETAILS]: "تفاصيل",
+  [DATE]: "التاريخ",
+  [TIME]: "الوقت",
   [DayOfWeek.Fri]: "الجمعة",
   [DayOfWeek.Sat]: "السبت",
   [DayOfWeek.Sun]: "الاحد",

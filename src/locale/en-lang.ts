@@ -13,4 +13,7 @@ export const enLang = {
   DELIVERED_TO_SENDER: DELIVERED,
   DELIVERED: DELIVERED,
   CANCELLED: DELETED,
+  WAITING_FOR_CUSTOMER_ACTION: "Waiting For Customer Action",
+  NOT_YET_SHIPPED: "Not Yet Shipped",
+  IN_TRANSIT: "In Transit",
 };

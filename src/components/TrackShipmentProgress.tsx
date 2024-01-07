@@ -38,6 +38,7 @@ const trackStatus: { [key: string]: string } = {
   IN_TRANSIT: "green",
   NOT_YET_SHIPPED: "green",
   DELIVERED: "green",
+  DELIVERED_TO_SENDER: "green",
   CANCELLED: "red",
   DELETED: "red",
   WAITING_FOR_CUSTOMER_ACTION: "Yellow",

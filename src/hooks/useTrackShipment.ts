@@ -4,6 +4,7 @@ import ApiClient from "../services/api-client";
 interface TransitEvent {
   state: string;
   timestamp: string;
+  hub: string;
 }
 
 export interface TrackShipment {
